@@ -8,19 +8,19 @@
       >
       <div class="flex items-center gap-1">
         <router-link
-          to="/"
+          :to="{ name: 'byName' }"
           class="inline-flex items-center px-2 h-full transition-colors hover:bg-purple-100"
         >
           search meals
         </router-link>
         <router-link
-          to="/"
+          :to="{ name: 'byLetter' }"
           class="inline-flex items-center px-2 h-full transition-colors hover:bg-purple-100"
         >
           meals by letter
         </router-link>
         <router-link
-          to="/"
+          :to="{ name: 'byIngredient' }"
           class="inline-flex items-center px-2 h-full transition-colors hover:bg-purple-100"
         >
           meals by ingredients
