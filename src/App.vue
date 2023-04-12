@@ -1,10 +1,6 @@
-
 <template>
-  app.vue
+  <h1 class="bg-blue-500">app.vue</h1>
 </template>
-<script setup>
+<script setup></script>
 
-</script>
-
-<style scoped>
-</style>
+<style scoped></style>
