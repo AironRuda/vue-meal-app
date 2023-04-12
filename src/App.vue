@@ -1,5 +1,5 @@
 <template>
-  <h1 class="bg-blue-500">app.vue</h1>
+  <router-view />
 </template>
 <script setup></script>
 
