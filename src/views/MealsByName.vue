@@ -29,12 +29,7 @@
           neque?
         </p>
         <div class="flex items-center justify-between">
-          <a
-            :href="meal.strYoutube"
-            target="_blanck"
-            class="p-3 rounded border-2 border-red-600 hover:bg-red-500 hover:text-white transition-colors"
-            >YouTube</a
-          >
+          <you-tube-button :href="meal.strYoutube" />
         </div>
       </div>
     </div>
@@ -46,6 +41,7 @@ import { onMounted, ref } from "vue";
 import store from "../store";
 import { computed } from "@vue/reactivity";
 import { useRoute } from "vue-router";
+import YouTubeButton from "../components/YouTubeButton.vue";
 const keyword = ref("");
 const meals = computed(() => store.state.searchedMeals);
 const route = useRoute();
