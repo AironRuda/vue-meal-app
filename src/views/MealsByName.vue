@@ -29,7 +29,7 @@
           neque?
         </p>
         <div class="flex items-center justify-between">
-          <you-tube-button :href="meal.strYoutube" />
+          <you-tube-button :href="meal.strYoutube">Youtube</you-tube-button>
         </div>
       </div>
     </div>
