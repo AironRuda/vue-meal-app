@@ -10,29 +10,7 @@
   </div>
 
   <div class="grid grid-cols-1 md:grid-cols-3 gap-5 p-8">
-    <div
-      v-for="meal of meals"
-      :key="meal.idMeal"
-      class="bg-white shadow rounded-xl"
-    >
-      <router-link :to="{ name: 'mealDetails', params: { id: meal.idMeal } }">
-        <img
-          :src="meal.strMealThumb"
-          :alt="meal.strMeal"
-          class="rounded-t-xl w-full h-48 object-cover"
-        />
-      </router-link>
-      <div class="p-3">
-        <h3 class="font-bold">{{ meal.strMeal }}</h3>
-        <p class="mb-4">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat,
-          neque?
-        </p>
-        <div class="flex items-center justify-between">
-          <you-tube-button :href="meal.strYoutube">Youtube</you-tube-button>
-        </div>
-      </div>
-    </div>
+    <MealItem v-for="meal of meals" :key="meal.idMeal" :meal="meal" />
   </div>
 </template>
 
@@ -42,6 +20,7 @@ import store from "../store";
 import { computed } from "@vue/reactivity";
 import { useRoute } from "vue-router";
 import YouTubeButton from "../components/YouTubeButton.vue";
+import MealItem from "../components/MealItem.vue";
 const keyword = ref("");
 const meals = computed(() => store.state.searchedMeals);
 const route = useRoute();
