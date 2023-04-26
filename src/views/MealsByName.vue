@@ -9,9 +9,10 @@
     />
   </div>
 
-  <div class="grid grid-cols-1 md:grid-cols-3 gap-5 p-8">
+  <Meals :meals="meals" />
+  <!-- <div class="grid grid-cols-1 md:grid-cols-3 gap-5 p-8">
     <MealItem v-for="meal of meals" :key="meal.idMeal" :meal="meal" />
-  </div>
+  </div> -->
 </template>
 
 <script setup>
@@ -19,8 +20,7 @@ import { onMounted, ref } from "vue";
 import store from "../store";
 import { computed } from "@vue/reactivity";
 import { useRoute } from "vue-router";
-import YouTubeButton from "../components/YouTubeButton.vue";
-import MealItem from "../components/MealItem.vue";
+import Meals from "../components/Meals.vue";
 const keyword = ref("");
 const meals = computed(() => store.state.searchedMeals);
 const route = useRoute();
